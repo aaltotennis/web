@@ -1,0 +1,29 @@
+{
+  "name": "web",
+  "type": "module",
+  "scripts": {
+		"build": "bunx @11ty/eleventy",
+		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 bunx @11ty/eleventy",
+		"build-ghpages": "bunx @11ty/eleventy --pathprefix=/web/",
+		"start": "bunx @11ty/eleventy --serve --quiet",
+		"start-ghpages": "bunx @11ty/eleventy --pathprefix=/web/ --serve --quiet",
+		"debug": "cross-env DEBUG=Eleventy* bunx @11ty/eleventy",
+		"debugstart": "cross-env DEBUG=Eleventy* bunx @11ty/eleventy --serve --quiet",
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* bunx @11ty/eleventy"
+	},
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaltotennis/web.git"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
