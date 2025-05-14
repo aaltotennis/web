@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{metadata.title }}</title>
+        <meta name="description" content="{{ description or metadata.description }}">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700&display=swap');
+        </style>
+        <link rel="stylesheet" type="text/css" href="/public/style.css" />
+    </head>
+    <body>
+        <header>
+            <a href="/" class="nav-item">
+            <div id="logo-div">
+            <img id="logo-img" src="/public/AT_logo_no-text.jpg"/>
+            <p>It's not racket science!</p>
+            </div>
+            </a>
+            
+            {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+            {# <nav>
+                <h2 class="visually-hidden">Top level navigation menu</h2>
+                <ul class="nav">
+                    {%- for entry in collections.all | eleventyNavigation %}
+                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+                    {%- endfor %}
+                    </ul>
+            </nav> #}
+            <a href="/join" class="nav-item"><div id="join-button">Join the club!</div></a>
+        </header>
+        
+        <main>
+            <div id="inner">
+            {{ content | safe }}
+            </div>
+        </main>
+    
+        <footer>
+            <p><em><a href="/board">Get to know us</a> 
+            debug:<a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
+        </footer>
+        
+        {# <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+        <script type="module" src="{% getBundleFileUrl "js" %}"></script> #}
+        </body>
+</html>

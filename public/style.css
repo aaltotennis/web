@@ -1,0 +1,66 @@
+:root {
+  --color-bg: #273226;
+  --color-text-main: #dfe8e6;
+  --color-text-header: #dfe8e6;
+  --color-primary: #cdfd55;
+  --wrapper-height: 85vh;
+  --image-max-width: 320px;
+  --font-family: "Inter";
+  --font-family-header: "Inter";
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+body {
+    font-family: Inter;
+    background-color: #273226;
+    color: #dfe8e6;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #cdfd55;
+}
+
+body>main {
+    margin: 5% 10%;
+}
+
+.nav-item {
+    text-decoration: none;
+}
+
+#join-button {
+    color: #273226;
+    background-color: #cdfd55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10pt;
+}
+
+#logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-div>p {
+    margin-left: 10pt;
+}
+
+#logo-img {
+    height: 40pt;
+    width: auto;
+}
+
+
