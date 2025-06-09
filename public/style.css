@@ -46,6 +46,7 @@ body>main {
     justify-content: center;
     align-items: center;
     padding: 10pt;
+    border-radius: 20pt;
 }
 
 #logo-div {
