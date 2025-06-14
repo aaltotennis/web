@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Inter;
+      color: #dfe8e6;
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const body = document.body;
+    const date = new Date();
+    const day = date.getDate(); // 1–31
+    const dayOfWeek = date.getDay(); // 0 (Sun) – 6 (Sat)
+
+    // Example: change background by day of week
+    const colors = {
+      0: '#1e1e1e', // Sunday
+      1: '#b65f3a', // Monday
+      2: '#3a6cb6', // Tuesday
+      3: '#3ab65f', // Wednesday
+      4: '#b63a8f', // Thursday
+      5: '#b6a13a', // Friday
+      6: '#3ab6b1'  // Saturday
+    };
+
+    body.style.backgroundColor = colors[dayOfWeek];
+  </script>
+</body>
+</html>

@@ -7,6 +7,46 @@
         <meta name="description" content="{{ description or metadata.description }}">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700&display=swap');
+            
+            /* Tennis ball styling */
+            .tennis-ball {
+                color: #fff;
+                font-size: 1.4em;
+                font-family: Arial, sans-serif;
+                text-shadow: 0 0 5px #000;
+                position: fixed;
+                z-index: -1;
+                -webkit-user-select: none;
+                user-select: none;
+                cursor: default;
+                pointer-events: none;
+                animation: bounce 5s infinite ease-in-out;
+            }
+
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(0) translateX(0);
+                }
+                25% {
+                    transform: translateY(-50vh) translateX(20vw);
+                }
+                50% {
+                    transform: translateY(0) translateX(40vw);
+                }
+                75% {
+                    transform: translateY(-50vh) translateX(60vw);
+                }
+            }
+
+            .tennis-ball:nth-of-type(1) {
+                animation-delay: 0s;
+            }
+            .tennis-ball:nth-of-type(2) {
+                animation-delay: 1s;
+            }
+            .tennis-ball:nth-of-type(3) {
+                animation-delay: 2s;
+            }
         </style>
         <link rel="stylesheet" type="text/css" href="/public/style.css" />
     </head>
@@ -14,20 +54,10 @@
         <header>
             <a href="/" class="nav-item">
             <div id="logo-div">
-            <img id="logo-img" src="/public/AT_logo_no-text-bg.png"/>
+            <img id="logo-img" src="/public/AT_logo_no_text_yellowwhite.png"/>
             <p>It's not racket science!</p>
             </div>
             </a>
-            
-            {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-            {# <nav>
-                <h2 class="visually-hidden">Top level navigation menu</h2>
-                <ul class="nav">
-                    {%- for entry in collections.all | eleventyNavigation %}
-                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-                    {%- endfor %}
-                    </ul>
-            </nav> #}
             <a href="/join" class="nav-item"><div id="join-button">Join the club!</div></a>
         </header>
         
@@ -42,7 +72,49 @@
             debug:<a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
         </footer>
         
-        {# <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
-        <script type="module" src="{% getBundleFileUrl "js" %}"></script> #}
-        </body>
+        <script>
+            const body = document.body;
+            const date = new Date();
+            const month = date.getMonth(); // 0 (Jan) – 11 (Dec)
+            const day = date.getDate();
+
+            // Tennis event colors
+            const eventColors = {
+                australianOpen: '#4f9ccd', // Mid January
+                rolandGarros: '#b65f3a',   // Late May - Early June
+                wimbledon: '#273226',     // Late June - July
+                usOpen: '#315a98'         // August - September
+            };
+
+            // Determine the current event based on the date
+            let backgroundColor = '#964734'; // Default color
+            let isEventActive = false; // Flag to check if an event is active
+
+            if (month === 0 && day >= 12 && day <= 26) {
+                backgroundColor = eventColors.australianOpen; // Australian Open
+                isEventActive = true;
+            } else if ((month === 4 && day >= 25) || (month === 5 && day <= 8)) {
+                backgroundColor = eventColors.rolandGarros; // Roland-Garros
+                isEventActive = true;
+            } else if ((month === 5 && day >= 30) || (month === 6 && day <= 13)) {
+                backgroundColor = eventColors.wimbledon; // Wimbledon
+                isEventActive = true;
+            } else if ((month === 7 && day >= 24) || (month === 8 && day <= 7)) {
+                backgroundColor = eventColors.usOpen; // US Open
+                isEventActive = true;
+            }
+
+            body.style.backgroundColor = backgroundColor;
+
+            // Add bouncing tennis ball effect only during active events
+            if (isEventActive) {
+                for (let i = 0; i < 1; i++) {
+                    const tennisBall = document.createElement('div');
+                    tennisBall.className = 'tennis-ball';
+                    tennisBall.textContent = '🎾';
+                    document.body.appendChild(tennisBall);
+                }
+            }
+        </script>
+    </body>
 </html>
