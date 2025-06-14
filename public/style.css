@@ -17,9 +17,26 @@ header {
 
 body {
     font-family: Inter;
-    background-color: #273226;
+    /* background-color: #273226; */ 
+    background-color: #b65f3a;  
     color: #dfe8e6;
 }
+
+/* Main tennis events and their colors: 
+Australian Open: Mid january                        -- #4f9ccd;
+Roland-Garros:: late May - early June               -- #b65f3a
+Wimbledon: late June - July                         -- #273226 
+US Open: August - September                         -- #315a98 (or #2a334e;) +(add green?) 
+Add white lines betweeen body and header
+
+
+
+Australian Open: 12 January – 26 January 2025
+French Open (Roland Garros): 25 May – 8 June 2025
+Wimbledon: 30 June – 13 July 2025
+US Open: 24 August – 7 September 2025
+*/
+
 
 footer {
     display: flex;
