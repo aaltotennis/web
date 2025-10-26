@@ -5,7 +5,7 @@
 * Try extending it to suit your needs!
 */
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
   eleventyConfig.setTemplateFormats([
     // Templates:
     "html",
