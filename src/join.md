@@ -2,7 +2,7 @@
 layout: layouts/join.njk
 ---
 
-# Get your memebership!
+# Get your membership!
 
 You can become a new member by filling out the form below. Pay the membership fee according to the instructions in the description of the form.
 
@@ -10,8 +10,8 @@ You can become a new member by filling out the form below. Pay the membership fe
 
 ## Membership benefits
 
-    Possibility to play league tennis in the teams of Aalto Tennis and take part in national tennis tournaments (these also requires registration to the Finnish Tennis Association)
-    Take part in events organized by Aalto Tennis
+- Possibility to play league tennis in the teams of Aalto Tennis and take part in national tennis tournaments (this also requires registration to the Finnish Tennis Association)
+- Take part in events organized by Aalto Tennis
 
 **Membership fee**:
 
