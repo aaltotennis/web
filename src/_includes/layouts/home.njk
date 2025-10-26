@@ -5,10 +5,10 @@ templateClass: tmpl-home
 
 <div class="content home-content">
     <div class="hero-section">
-        <h1 id="main-title">{{title}}</h1>
+        <h1 id="main-title">{{ title }}</h1>
         <div class="hero-tagline">
             <span class="icon-tennis">🎾</span>
-            <span>Serving aces since 1965</span>
+            <span>{{ tagline }}</span>
             <span class="icon-tennis">🎾</span>
         </div>
     </div>
@@ -19,16 +19,16 @@ templateClass: tmpl-home
     
     <div class="cta-section">
         <div class="cta-card">
-            <h3>Ready to serve?</h3>
-            <p class="text-muted">Join Aalto's premier tennis community today</p>
-            <a href="/join" class="button">
+            <h3>{{ ctaHeading }}</h3>
+            <p class="text-muted">{{ ctaDescription }}</p>
+            <a href="{{ ctaButtonLink | url }}" id="cta-button">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                     <circle cx="8.5" cy="7" r="4"></circle>
                     <line x1="20" y1="8" x2="20" y2="14"></line>
                     <line x1="23" y1="11" x2="17" y2="11"></line>
                 </svg>
-                <span>Become a Member</span>
+                <span>{{ ctaButtonText }}</span>
             </a>
         </div>
     </div>

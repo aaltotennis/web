@@ -1,6 +1,11 @@
 ---
 layout: layouts/home.njk
 title: AALTO TENNIS
+tagline: Serving aces since 1965
+ctaHeading: Ready to serve?
+ctaDescription: Join Aalto tennis today!
+ctaButtonText: Become a Member
+ctaButtonLink: /join
 ---
 
 Aalto Tennis, formerly known as Teekkaritennis is a student association under Aalto University. The club was founded in 1965 by a group of students from Helsinki University of Technology, but nowadays students and graduates from all universities are welcome to join the club! Aalto Tennis is also an official tennis club approved by the Finnish Tennis Association.
