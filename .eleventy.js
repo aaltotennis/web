@@ -20,7 +20,12 @@ export default function(eleventyConfig) {
     "woff",
     "woff2"
   ]);
+  
+  // Copy public folder without symlinks (required for GitHub Pages artifact)
   eleventyConfig.addPassthroughCopy("public");
+  
+  // Copy .nojekyll to build root (tells GitHub Pages not to ignore files starting with _)
+  eleventyConfig.addPassthroughCopy("src/.nojekyll");
 
   /* From: https://github.com/artstorm/eleventy-plugin-seo
   
