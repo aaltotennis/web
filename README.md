@@ -17,7 +17,7 @@ Have fun hacking!
 
 ## Deployment
 
-This website is automatically deployed to GitHub Pages using GitHub Actions. Every push to the `main` branch triggers a build and deployment to the `publish` branch, which is then served by GitHub Pages.
+This website is automatically deployed to GitHub Pages using GitHub Actions. Every push to the `main` branch triggers a build and deployment using the official [GitHub Pages deployment actions](https://github.com/marketplace/actions/upload-github-pages-artifact).
 
 ### Setup GitHub Pages (one-time)
 
@@ -26,8 +26,7 @@ To enable GitHub Pages for this repository:
 1. Go to your repository settings on GitHub
 2. Navigate to **Pages** section (under "Code and automation")
 3. Under "Build and deployment":
-   - Source: Select **Deploy from a branch**
-   - Branch: Select **publish** and **/ (root)** folder
-4. Click **Save**
+   - Source: Select **GitHub Actions**
+4. The workflow will handle the rest automatically
 
 The site will be available at: https://aaltotennis.github.io/web/
