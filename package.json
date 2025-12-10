@@ -4,9 +4,9 @@
   "scripts": {
 		"build": "bunx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 bunx @11ty/eleventy",
-		"build-ghpages": "bunx @11ty/eleventy --pathprefix=/web/",
+		"build-ghpages": "bunx @11ty/eleventy",
 		"start": "bunx @11ty/eleventy --serve --quiet",
-		"start-ghpages": "bunx @11ty/eleventy --pathprefix=/web/ --serve --quiet",
+		"start-ghpages": "bunx @11ty/eleventy --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* bunx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* bunx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* bunx @11ty/eleventy"
