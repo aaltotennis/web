@@ -2,15 +2,14 @@
 layout: layouts/board.njk
 ---
 
-# Year 2025 board members
+# Year 2026 board members
 
-- **President**: Axel
-- **Secretary**: Lotta
-- **Treasurer**: Anton
-- **Coaching**: Aku & Patrik
-- **Events**: Avashesh & Lassi
-- **Trip**: Neariina & Mark
-- **IT/Marketing**: Riccardo
+- **President**: Anton Karttunen
+- **Secretary/IT**: Antti Chen
+- **Treasurer**: Oskari Luukkonen    
+- **Coaching**: Mark Mozheiko
+- **Events**: Avashesh Kumar, Lassi Lahtiluoma & Deepak Mukundan
+- **Trip**: Neariina Peltoniemi, Pinja Ruoho & Sofia Korkkinen
 
 ## Contact us
 
