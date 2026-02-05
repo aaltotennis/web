@@ -4,6 +4,8 @@ layout: layouts/join.njk
 
 # Get your membership!
 
+Aalto Tennis membership is primarily for competing players. Participation in events organized by Aalto Tennis does not require membership.
+
 You can become a new member by filling out the form below. Pay the membership fee according to the instructions in the description of the form.
 
 [FILL THIS FORM](https://forms.gle/o3fP8ocdwa6T8dhb7)
@@ -11,7 +13,6 @@ You can become a new member by filling out the form below. Pay the membership fe
 ## Membership benefits
 
 - Possibility to play league tennis in the teams of Aalto Tennis and take part in national tennis tournaments (this also requires registration to the Finnish Tennis Association)
-- Take part in events organized by Aalto Tennis
 
 **Membership fee**:
 
